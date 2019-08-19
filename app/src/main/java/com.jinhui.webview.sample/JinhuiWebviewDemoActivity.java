@@ -8,7 +8,8 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.jinhui365.util.webview.JHWebFragment;
+
+import com.jinhui365.core.JHWebFragment;
 
 import java.util.HashMap;
 

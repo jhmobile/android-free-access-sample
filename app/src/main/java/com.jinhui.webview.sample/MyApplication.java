@@ -2,8 +2,8 @@ package com.jinhui.webview.sample;
 
 import android.app.Application;
 
-import com.jinhui365.util.webview.JHWebViewConnectJSListener;
-import com.jinhui365.util.webview.JHWebViewManager;
+import com.jinhui365.core.JHWebViewConnectJSListener;
+import com.jinhui365.core.JHWebViewManager;
 
 import java.util.HashMap;
 import java.util.Map;
