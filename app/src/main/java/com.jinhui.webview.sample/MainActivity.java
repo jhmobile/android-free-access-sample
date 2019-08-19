@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         btnActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.e("XXXXXX","        btnActivity.setOnClickListener(new View.OnClickListener() {\n");
                 String url = etView.getText().toString().trim();
                 JHWebViewManager.getInstance().push(MainActivity.this, url, null);
             }

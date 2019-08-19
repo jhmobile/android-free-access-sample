@@ -35,6 +35,11 @@ allprojects {
 
 <pre>
 <code>
+    @Override
+    public void onCreate(){
+        super.onCreate();
+        ......
+        
          Map<String, Object> params = new HashMap<>();
          params.put("key1", "value1");
          params.put("key2", "夜轻轻");
@@ -58,6 +63,8 @@ allprojects {
                      }
                  })
                  .init(this);
+                 
+    }
 </code>
 </pre>
 
@@ -95,8 +102,8 @@ JHWebViewManager.getInstance().logout();
 #### 6.JHWebViewConnectJSListener通信类型对应的回调参数及方法
 |key|枚举值|描述|回调方法|必填参数|
 |:-:|:-:|:-:|:-:| :-:| 
-|type|login|登录通信|JHWebViewManager.getInstance().login(thirdInfo)|参考[login参数表](login参数表)|
-|type|risk|风险测评通信|JHWebViewManager.getInstance().connectResult(code, "message", "type", params);|参考[risk参数表](risk参数表)|
+|type|login|登录通信|JHWebViewManager.getInstance().login(thirdInfo)|详见login参数表|
+|type|risk|风险测评通信|JHWebViewManager.getInstance().connectResult(code, "message", "type", params);|详见risk参数表]|
 
 #### type类型参数表
 ##### （1）login参数表
