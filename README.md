@@ -121,4 +121,4 @@ JHWebViewManager.getInstance().logout();
 |code|是|状态：0 成功；1:失败|
 |message|否|状态描述|
 |type|是|处理的通信类型：risk|
-|params|fou|通信返回参数；可为空|
+|params|否|通信返回参数；可为空|
