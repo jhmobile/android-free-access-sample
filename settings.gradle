@@ -1,0 +1,3 @@
+include ':app'
+include ':library-util'
+project(':library-util').projectDir = new File('../android-jinhui-util/library-util')
