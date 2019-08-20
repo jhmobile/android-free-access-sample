@@ -1,3 +1,0 @@
-include ':app'
-include ':library-free-access'
-project(':library-free-access').projectDir = new File('../android-jinhui-webview/library-free-access')
