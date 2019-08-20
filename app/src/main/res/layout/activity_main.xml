@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="工具类相关测试入口"
+         />
+    <EditText
+        android:id="@+id/ed_webview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="输入webivew加载地址"/>
+    <Button
+        android:id="@+id/btn_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="含有底部tab的页面加载webView"/>
+    <Button
+        android:id="@+id/btn_activity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="不有底部tab的页面加载webView"
+        android:layout_marginTop="30dp"/>
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="退出登录"
+        android:layout_marginTop="30dp"/>
+</LinearLayout>
