@@ -107,7 +107,7 @@ JHWebViewManager.getInstance().logout();
 ##### （1）login参数表
 |参数key|是否必填|描述|
 |:-:|:-:|:-:|
-|name|是|用户名|
+|name|是|姓名|
 |idNo|是|身份证号|
 |mobile|是|手机号|
 |bankAccount|是|资金账号|

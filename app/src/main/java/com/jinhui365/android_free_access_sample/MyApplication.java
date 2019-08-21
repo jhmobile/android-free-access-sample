@@ -37,7 +37,7 @@ public class MyApplication extends Application {
                 .init(this);
 
         //如果是已登录用户
-//        loginInfo();
+        loginInfo();
 
     }
 
