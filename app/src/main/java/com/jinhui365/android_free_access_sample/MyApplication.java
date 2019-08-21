@@ -16,7 +16,7 @@ public class MyApplication extends Application {
         params.put("key1", "value1");
         params.put("key2", "夜轻轻");
         JHWebViewManager.getInstance()
-                .setAppKeySecret("jh2adf1307ec1830bc", "45addb98955e4359a9d7a695979fb27c")
+                .setAppKeySecret("sdk_website_176b34", "44cd6b3401ecb470e1f586ec6a67c24b")
                 .setEnvironmentModel(false)
                 .setParams(params)
                 .setJHWebViewListener(new JHWebViewConnectJSListener() {
@@ -25,7 +25,7 @@ public class MyApplication extends Application {
                         switch (type) {
                             case "login":
                                 //调用登录页面
-                                LoginModuleActivity.startActivity(getBaseContext());
+                                LoginModuleActivity.startActivity(getBaseContext(),1);
                                 break;
                             case "risk":
                                 //调用风险测评页面
@@ -42,11 +42,13 @@ public class MyApplication extends Application {
     }
 
     private void loginInfo() {
+
+        // 开头	130102199003075293	11120190811 10011207
         Map<String, Object> thirdInfo = new HashMap<>();
-        thirdInfo.put("name", "卫子夫");//姓名
-        thirdInfo.put("idNo", "110000197603217303");//身份证号
-        thirdInfo.put("mobile", "18515279796");//手机号
-        thirdInfo.put("bankAccount", "10004695");//华创资金账户
+        thirdInfo.put("name", "开头");//姓名
+        thirdInfo.put("idNo", "130102199003075293");//身份证号
+        thirdInfo.put("mobile", "11120190811");//手机号
+        thirdInfo.put("bankAccount", "10011207");//华创资金账户
         JHWebViewManager.getInstance().login(thirdInfo);
     }
 }

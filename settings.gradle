@@ -1,5 +1,5 @@
 include ':app'
-include ':library-free-access'
-project(':library-free-access').projectDir = new File('../android-jinhui-webview/library-free-access')
+include ':library-jinhui'
+project(':library-jinhui').projectDir = new File('../android-jinhui-library/library-jinhui')
 include ':library-util'
 project(':library-util').projectDir = new File('../android-jinhui-util/library-util')

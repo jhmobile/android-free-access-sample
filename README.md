@@ -25,7 +25,7 @@ allprojects {
 <code>
   dependencies {
     ......
-   implementation 'com.jinhui365.library:free-access-lib:0.1.0'
+   implementation 'com.jinhui365.library:jinhui-lib:0.1.0'
    }
 </code>
 </pre>

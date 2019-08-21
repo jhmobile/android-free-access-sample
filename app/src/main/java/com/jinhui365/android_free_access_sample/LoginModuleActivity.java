@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.jinhui365.core.JHWebViewManager;
 
@@ -20,6 +21,7 @@ import java.util.Map;
 public class LoginModuleActivity extends FragmentActivity implements View.OnClickListener {
     private Button btnFail;
     private Button btnSuccess;
+    private EditText etName,etIdNo,etMobile,etAccount;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,6 +29,10 @@ public class LoginModuleActivity extends FragmentActivity implements View.OnClic
         setContentView(R.layout.activity_login_module);
         btnFail = findViewById(R.id.btn_fail);
         btnSuccess = findViewById(R.id.btn_success);
+        etName = findViewById(R.id.et_name);
+        etIdNo = findViewById(R.id.et_idNo);
+        etMobile = findViewById(R.id.et_mobile);
+        etAccount = findViewById(R.id.et_account);
 
         btnFail.setOnClickListener(this);
         btnSuccess.setOnClickListener(this);
@@ -39,19 +45,33 @@ public class LoginModuleActivity extends FragmentActivity implements View.OnClic
                 finish();
                 break;
             case R.id.btn_success:
-                Map<String, Object> thirdInfo = new HashMap<>();
-                thirdInfo.put("name", "卫子夫");//姓名
-                thirdInfo.put("idNo", "110000197603217303");//身份证号
-                thirdInfo.put("mobile", "18515279796");//手机号
-                thirdInfo.put("bankAccount", "10004695");//华创资金账户
-                JHWebViewManager.getInstance().login(thirdInfo);
-                finish();
+loginSuccess();
+
                 break;
         }
     }
 
-    public static void startActivity(Context context){
+    private void loginSuccess(){
+//        String name = etName.getText().toString().trim();
+//        String idNo = etIdNo.getText().toString().trim();
+//        String mobile = etIdNo.getText().toString().trim();
+//        String account = etIdNo.getText().toString().trim();
+
+        Map<String, Object> thirdInfo = new HashMap<>();
+        thirdInfo.put("name", "开头");//姓名
+        thirdInfo.put("idNo", "130102199003075293");//身份证号
+        thirdInfo.put("mobile", "11120190811");//手机号
+        thirdInfo.put("bankAccount", "10011207");//华创资金账户
+
+        JHWebViewManager.getInstance().login(thirdInfo);
+        finish();
+    }
+
+
+    public static void startActivity(Context context,int fromFlag){
         Intent intent = new Intent(context,LoginModuleActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.putExtra("fromFlag",fromFlag);
         context.startActivity(intent);
     }
 }

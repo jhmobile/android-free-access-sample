@@ -47,6 +47,7 @@ public class RiskModuleActivity extends FragmentActivity implements View.OnClick
 
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, RiskModuleActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 }
