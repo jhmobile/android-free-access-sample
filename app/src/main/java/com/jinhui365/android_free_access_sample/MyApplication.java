@@ -12,9 +12,10 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        //金汇appkey  appSecert  jh2adf1307ec1830bc   45addb98955e4359a9d7a695979fb27c
+        //SDK sdk_website_176b34  44cd6b3401ecb470e1f586ec6a67c24b
         Map<String, Object> params = new HashMap<>();
-        params.put("key1", "value1");
-        params.put("key2", "夜轻轻");
+        params.put("themeColor", "#e2bea5");
         JHWebViewManager.getInstance()
                 .setAppKeySecret("sdk_website_176b34", "44cd6b3401ecb470e1f586ec6a67c24b")
                 .setEnvironmentModel(false)
@@ -42,13 +43,7 @@ public class MyApplication extends Application {
     }
 
     private void loginInfo() {
-
-        // 开头	130102199003075293	11120190811 10011207
-        Map<String, Object> thirdInfo = new HashMap<>();
-        thirdInfo.put("name", "开头");//姓名
-        thirdInfo.put("idNo", "130102199003075293");//身份证号
-        thirdInfo.put("mobile", "11120190811");//手机号
-        thirdInfo.put("bankAccount", "10011207");//华创资金账户
+        Map<String,Object> thirdInfo = Util.getUserInfo(getBaseContext());
         JHWebViewManager.getInstance().login(thirdInfo);
     }
 }

@@ -2,6 +2,7 @@ package com.jinhui365.android_free_access_sample;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.jinhui365.core.JHWebView;
 import com.jinhui365.core.JHWebViewManager;
 
 import java.util.HashMap;
@@ -21,7 +23,7 @@ import java.util.Map;
 public class LoginModuleActivity extends FragmentActivity implements View.OnClickListener {
     private Button btnFail;
     private Button btnSuccess;
-    private EditText etName,etIdNo,etMobile,etAccount;
+    private EditText etName, etIdNo, etMobile, etAccount;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,33 +47,32 @@ public class LoginModuleActivity extends FragmentActivity implements View.OnClic
                 finish();
                 break;
             case R.id.btn_success:
-loginSuccess();
-
+                loginSuccess();
                 break;
         }
     }
 
-    private void loginSuccess(){
-//        String name = etName.getText().toString().trim();
-//        String idNo = etIdNo.getText().toString().trim();
-//        String mobile = etIdNo.getText().toString().trim();
-//        String account = etIdNo.getText().toString().trim();
+    private void loginSuccess() {
+        String name = etName.getText().toString().trim();
+        String idNo = etIdNo.getText().toString().trim();
+        String mobile = etMobile.getText().toString().trim();
+        String account = etAccount.getText().toString().trim();
 
         Map<String, Object> thirdInfo = new HashMap<>();
-        thirdInfo.put("name", "开头");//姓名
-        thirdInfo.put("idNo", "130102199003075293");//身份证号
-        thirdInfo.put("mobile", "11120190811");//手机号
-        thirdInfo.put("bankAccount", "10011207");//华创资金账户
-
+        thirdInfo.put("name", name);//姓名
+        thirdInfo.put("idNo", idNo);//身份证号
+        thirdInfo.put("mobile", mobile);//手机号
+        thirdInfo.put("bankAccount", account);//华创资金账户
+        Util.saveUserInfo(this, thirdInfo);
         JHWebViewManager.getInstance().login(thirdInfo);
         finish();
     }
 
 
-    public static void startActivity(Context context,int fromFlag){
-        Intent intent = new Intent(context,LoginModuleActivity.class);
+    public static void startActivity(Context context, int fromFlag) {
+        Intent intent = new Intent(context, LoginModuleActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.putExtra("fromFlag",fromFlag);
+        intent.putExtra("fromFlag", fromFlag);
         context.startActivity(intent);
     }
 }

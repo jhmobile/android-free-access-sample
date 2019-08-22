@@ -5,34 +5,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center_vertical"
+    android:gravity="center_horizontal"
     >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="工具类相关测试入口"
-         />
-    <EditText
-        android:id="@+id/ed_webview"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="输入webivew加载地址"/>
+        android:background="@color/C6"
+        android:gravity="center"
+        android:textColor="@color/C1"
+        android:text="外端APP"
+         />
+    <TextView
+        android:id="@+id/tv_login_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="30sp"
+        android:text="登录状态："
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="加载路由:"/>
+        <EditText
+            android:id="@+id/ed_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="输入加载路由，支持相对地址"
+            android:text=""/>
+    </LinearLayout>
     <Button
         android:id="@+id/btn_fragment"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:text="含有底部tab的页面加载webView"/>
+        android:layout_marginTop="30dp"
+        android:background="@color/C6"
+        android:text="含tab的页面"/>
     <Button
         android:id="@+id/btn_activity"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:text="不有底部tab的页面加载webView"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        android:background="@color/C6"
+        android:text="不含tab的页面"
+        />
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:text="登录"
+        android:background="@color/C6"/>
     <Button
         android:id="@+id/btn_logout"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginTop="30dp"
         android:text="退出登录"
-        android:layout_marginTop="30dp"/>
+        android:background="@color/C6"/>
 </LinearLayout>

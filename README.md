@@ -39,12 +39,11 @@ allprojects {
         ......
         
          Map<String, Object> params = new HashMap<>();
-         params.put("key1", "value1");
-         params.put("key2", "夜轻轻");
+         params.put("themeColor", "#e2bea5");
          JHWebViewManager.getInstance()
                  .setAppKeySecret("jh2adf1307ec1830bc", "45addb98955e4359a9d7a695979fb27c")
                  .setEnvironmentModel(false)
-                 .setParams(params)//可不传
+                 .setParams(params)//可不传，根据需求传递相关扩展参数
                  .setJHWebViewListener(new JHWebViewConnectJSListener() {
                      @Override
                      public void onConnectListener(String type, Map<String, Object> options) {
@@ -103,7 +102,7 @@ JHWebViewManager.getInstance().logout();
 |type|login|登录通信|JHWebViewManager.getInstance().login(thirdInfo)|详见login参数表|
 |type|risk|风险测评通信|JHWebViewManager.getInstance().connectResult(code, "message", "type", params);|详见risk参数表]|
 
-#### type类型参数表
+#### 7.type类型参数表
 ##### （1）login参数表
 |参数key|是否必填|描述|
 |:-:|:-:|:-:|
@@ -120,3 +119,18 @@ JHWebViewManager.getInstance().logout();
 |message|否|状态描述|
 |type|是|处理的通信类型：risk|
 |params|否|通信返回参数；可为空|
+
+
+#### 8.setParams() 方法参数表
+|参数key|是否必填|描述|示例|
+|:-:|:-:|:-:|:-:|
+|themeColor|否|主题色纸|#cccccc|
+|......|否|未来扩展参数|暂无|
+
+
+#### 其他
+
+- 加载的url，支持绝对地址和相对地址：
+   - 相对地址：首页  /
+   - 据对地址：首页   https://m.jinhui365.cn/?
+
