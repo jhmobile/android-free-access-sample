@@ -12,7 +12,7 @@
         android:layout_height="50dp"
         android:background="@color/C6"
         android:gravity="center"
-        android:text="首页"
+        android:text="APP首页"
         android:textColor="@color/C1" />
 
     <TextView
@@ -25,20 +25,13 @@
         android:text="登录状态："
         android:textSize="30sp" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="15dp"
+        android:text="Hello,我是APP首页"
+        android:textSize="30sp" />
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/C6"
-        android:text="登录" />
-
-    <Button
-        android:id="@+id/btn_logout"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/C6"
-        android:text="退出登录" />
 </LinearLayout>

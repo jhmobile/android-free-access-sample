@@ -133,4 +133,5 @@ JHWebViewManager.getInstance().logout();
 - 加载的url，支持绝对地址和相对地址：
    - 相对地址：首页  /
    - 据对地址：首页   https://m.jinhui365.cn/?
+   - url可为空，为空默认进入首页
 

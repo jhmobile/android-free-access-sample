@@ -12,14 +12,13 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        //金汇appkey  appSecert  jh2adf1307ec1830bc   45addb98955e4359a9d7a695979fb27c
-        //SDK sdk_website_176b34  44cd6b3401ecb470e1f586ec6a67c24b
         Map<String, Object> params = new HashMap<>();
-        params.put("themeColor", "#e2bea5");
+        params.put("themeColor", "#DC143C");
         JHWebViewManager.getInstance()
                 .setAppKeySecret("sdk_website_176b34", "44cd6b3401ecb470e1f586ec6a67c24b")
                 .setEnvironmentModel(false)
                 .setParams(params)
+//                .setDebugJinHuiHost("http://local.jinhui365.cn:9099")
                 .setJHWebViewListener(new JHWebViewConnectJSListener() {
                     @Override
                     public void onConnectListener(String type, Map<String, Object> options) {

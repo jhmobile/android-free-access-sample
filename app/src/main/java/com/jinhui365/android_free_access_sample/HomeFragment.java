@@ -7,18 +7,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
-
-import com.jinhui365.core.JHWebViewManager;
 
 import java.util.Map;
 
 public class HomeFragment extends Fragment {
 
     private View rootView;
-    private Button btnLogout;
-    private Button btnLogin;
     private TextView tvLoginStatus;
 
     public static HomeFragment getInstance() {
@@ -36,25 +31,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void initView() {
-        btnLogout = rootView.findViewById(R.id.btn_logout);
-        btnLogin = rootView.findViewById(R.id.btn_login);
         tvLoginStatus = rootView.findViewById(R.id.tv_login_status);
-
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Util.clearUserInfo(getContext());
-                JHWebViewManager.getInstance().logout();
-                setStatus();
-            }
-        });
-
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                LoginModuleActivity.startActivity(getContext(), 2);
-            }
-        });
 
     }
 
