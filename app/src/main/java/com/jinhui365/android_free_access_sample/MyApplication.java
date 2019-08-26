@@ -15,10 +15,10 @@ public class MyApplication extends Application {
         Map<String, Object> params = new HashMap<>();
         params.put("themeColor", "#DC143C");
         JHWebViewManager.getInstance()
-                .setAppKeySecret("sdk_website_176b34", "44cd6b3401ecb470e1f586ec6a67c24b")
+                .setAppKeySecret("ed_website_aaf3327", "7aafd1481030ce5c88750cc90ed7a1b3")
                 .setEnvironmentModel(false)
                 .setParams(params)
-//                .setDebugJinHuiHost("http://local.jinhui365.cn:9099")
+                .setDebugJinHuiHost("http://local.jinhui365.cn:9099")
                 .setJHWebViewListener(new JHWebViewConnectJSListener() {
                     @Override
                     public void onConnectListener(String type, Map<String, Object> options) {
