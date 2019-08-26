@@ -134,4 +134,17 @@ JHWebViewManager.getInstance().logout();
    - 相对地址：首页  /
    - 据对地址：首页   https://m.jinhui365.cn/?
    - url可为空，为空默认进入首页
+   
+- 常规错误处理
+  - gson包冲突：
+  
+  <pre>
+  <code>
+  
+     implementation ('com.jinhui365.library:jinhui-lib:0.1.0'){
+             exclude group : 'com.google.code.gson'
+         }
+         
+  </code>
+  </pre>
 

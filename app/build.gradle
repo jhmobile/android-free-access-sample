@@ -21,5 +21,10 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
 //    implementation project(':library-jinhui')
+//    implementation ('com.jinhui365.library:jinhui-lib:0.1.0'){
+//        exclude group : 'com.google.code.gson'
+//    }
+//    api 'com.google.code.gson:gson:2.8.5'
     implementation 'com.jinhui365.library:jinhui-lib:0.1.0'
+
 }
