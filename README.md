@@ -15,7 +15,7 @@
 allprojects {
    repositories {
       maven {
-          url "http://mvn.gemantic.com:19909/content/repositories/snapshots/"
+          url "http://mvn.gemantic.com/content/repositories/release-other/"
             }
        ......
         }
@@ -27,7 +27,7 @@ allprojects {
 <code>
   dependencies {
     ......
-   implementation 'com.jinhui365.library:jinhui-lib:0.1.0-SNAPSHOT'
+   implementation 'com.jinhui365.library:jinhui-lib:0.1.0'
    }
 </code>
 </pre>
@@ -143,7 +143,7 @@ JHWebViewManager.getInstance().logout();
   <pre>
   <code>
   
-     implementation ('com.jinhui365.library:jinhui-lib:0.1.0-SNAPSHOT'){
+     implementation ('com.jinhui365.library:jinhui-lib:0.1.0'){
              exclude group : 'com.google.code.gson'
          }
          
