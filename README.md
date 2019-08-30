@@ -1,7 +1,7 @@
 
 # 移动端免登陆使用webView使用文档
 - 文档维护人：田俊梅
-- 当前最新版本：V0.1.1
+- 当前最新版本：V0.1.2
 
 #### 1.使用建议
 - 开发环境支持gradle4.4的脚本
@@ -27,10 +27,15 @@ allprojects {
 <code>
   dependencies {
     ......
-   implementation 'com.jinhui365.library:jinhui-lib:0.1.1'
+   implementation 'com.jinhui365.library:jinhui-lib:0.1.2'
    }
 </code>
 </pre>
+
+- AndroidManifest.xml配置FileProvider
+  - 具体配置，参考demo示例
+  
+  
 - 在application调用以下API进行初始化,钩子type值解释表；参考文档
 
 <pre>
