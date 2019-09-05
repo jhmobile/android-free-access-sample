@@ -1,7 +1,7 @@
 
 # 移动端免登陆使用webView使用文档
 - 文档维护人：田俊梅
-- 当前最新版本：V0.1.3
+- 当前最新版本：V0.1.4
 
 #### 1.使用建议
 - 开发环境支持gradle4.4的脚本
@@ -27,7 +27,7 @@ allprojects {
 <code>
   dependencies {
     ......
-   implementation 'com.jinhui365.library:jinhui-lib:0.1.3'
+   implementation 'com.jinhui365.library:jinhui-lib:0.1.4'
    }
 </code>
 </pre>
@@ -148,7 +148,7 @@ JHWebViewManager.getInstance().logout();
   <pre>
   <code>
   
-     implementation ('com.jinhui365.library:jinhui-lib:0.1.3'){
+     implementation ('com.jinhui365.library:jinhui-lib:0.1.4'){
              exclude group : 'com.google.code.gson'
          }
          
