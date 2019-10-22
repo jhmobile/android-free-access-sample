@@ -1,7 +1,7 @@
 
 # 移动端免登陆使用webView使用文档
 - 文档维护人：田俊梅
-- 当前最新版本：V0.1.5
+- 当前最新版本：V0.2.0
 
 #### 1.使用建议
 - 开发环境支持gradle4.4的脚本
@@ -27,7 +27,7 @@ allprojects {
 <code>
   dependencies {
     ......
-   implementation 'com.jinhui365.library:jinhui-lib:0.1.5'
+   implementation 'com.jinhui365.library:jinhui-lib:0.2.0'
    }
 </code>
 </pre>
@@ -134,6 +134,9 @@ JHWebViewManager.getInstance().logout();
 |themeColor|否|主题色纸|#cccccc|
 |......|否|未来扩展参数|暂无|
 
+#### 9.getJHWebActivityInstance() 获取webView的Activity对象
+ - 不建议使用，必须使用，记得维护activity的销毁，防止出现内存泄漏
+
 
 #### 其他
 
@@ -148,10 +151,29 @@ JHWebViewManager.getInstance().logout();
   <pre>
   <code>
   
-     implementation ('com.jinhui365.library:jinhui-lib:0.1.5'){
+     implementation ('com.jinhui365.library:jinhui-lib:0.2.0'){
              exclude group : 'com.google.code.gson'
          }
          
   </code>
   </pre>
+  
+ - 混淆
+  - 需要在混淆文件内添加如下代码：
+  
+   <pre>
+     <code>
+     
+      -keep class com.jinhui365.**{*;}
+      -keep interface com.jinhui365.**{*;}
+      -keepclasseswithmembers class com.jinhui365.util.webview.JHWebChromeClient{
+          public *;
+      }
+      -keepclasseswithmembers class com.jinhui365.util.webview.WebViewClient{
+          public *;
+      }
+      
+     </code>
+   </pre>
+  
 
