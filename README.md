@@ -1,7 +1,7 @@
 
 # 移动端免登陆使用webView使用文档
 - 文档维护人：田俊梅
-- 当前最新版本：V0.2.0
+- 当前最新版本：V0.2.1
 
 #### 1.使用建议
 - 开发环境支持gradle4.4的脚本
@@ -27,7 +27,7 @@ allprojects {
 <code>
   dependencies {
     ......
-   implementation 'com.jinhui365.library:jinhui-lib:0.2.0'
+   implementation 'com.jinhui365.library:jinhui-lib:0.2.1'
    }
 </code>
 </pre>
@@ -107,7 +107,7 @@ JHWebViewManager.getInstance().logout();
 |key|枚举值|描述|回调方法|必填参数|
 |:-:|:-:|:-:|:-:| :-:| 
 |type|login|登录通信|JHWebViewManager.getInstance().login(thirdInfo)|详见login参数表|
-|type|risk|风险测评通信|JHWebViewManager.getInstance().connectResult(code, "message", "type", params);|详见risk参数表]|
+|type|risk|风险测评通信|JHWebViewManager.getInstance().connectResult(code, "message", "type", params);|详见risk参数表,（该参数废弃）|
 
 #### 7.type类型参数表
 ##### （1）login参数表
@@ -151,7 +151,7 @@ JHWebViewManager.getInstance().logout();
   <pre>
   <code>
   
-     implementation ('com.jinhui365.library:jinhui-lib:0.2.0'){
+     implementation ('com.jinhui365.library:jinhui-lib:0.2.1'){
              exclude group : 'com.google.code.gson'
          }
          
