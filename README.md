@@ -180,19 +180,17 @@ JHWebViewManager.getInstance().logout();
    - 参考示例
     <pre>
      <code>
-      HashMap map = new HashMap<String,String>();
-      map.put("type","huoqi");
-      JHWebViewManager.getInstance().push(MainActivity.this, "/channel/product/huoqi", map);
+      JHWebViewManager.getInstance().push(MainActivity.this, "/channel/product/huoqi");
     </code>
    </pre> 
    - 参数列表
 
     |页面|参数|扩展参数|备注|
     |:-:|:-:|:-:|:-:|
-    |活期理财|/channel/product/huoqi |{type:"huoqi"}||
-    |稳健理财|/channel/product/wenjian|{type:"wenjian"}||
-    |资管私募|/channel/product/ziguansimu|{type:"ziguansim"}||
+    |活期理财|/channel/product/huoqi |无||
+    |稳健理财|/channel/product/wenjian|无||
+    |资管私募|/channel/product/ziguansimu|无||
     |公募基金|/product/mutual|无||
-    |股交产品|/channel/product/gujiao|{type:"gujiao"}||
+    |股交产品|/channel/product/gujiao|无||
   
 

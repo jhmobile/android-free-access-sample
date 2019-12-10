@@ -23,15 +23,50 @@
         android:layout_marginTop="50dp"
         android:layout_marginRight="15dp"
         android:text="登录状态："
-        android:textSize="30sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
         android:text="Hello,我是APP首页"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
 
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="活期理财"
+        />
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="稳健理财"
+        />
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="资管私募"
+        />
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="公募基金"
+        />
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="股交产品"
+        />
 </LinearLayout>

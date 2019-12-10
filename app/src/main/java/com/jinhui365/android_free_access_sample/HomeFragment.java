@@ -9,9 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.jinhui365.core.JHWebViewManager;
+
 import java.util.Map;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
 
     private View rootView;
     private TextView tvLoginStatus;
@@ -32,7 +34,32 @@ public class HomeFragment extends Fragment {
 
     private void initView() {
         tvLoginStatus = rootView.findViewById(R.id.tv_login_status);
+        rootView.findViewById(R.id.btn1).setOnClickListener(this);
+        rootView.findViewById(R.id.btn2).setOnClickListener(this);
+        rootView.findViewById(R.id.btn3).setOnClickListener(this);
+        rootView.findViewById(R.id.btn4).setOnClickListener(this);
+        rootView.findViewById(R.id.btn5).setOnClickListener(this);
+    }
 
+    @Override
+    public void onClick(View view){
+        switch (view.getId()){
+            case R.id.btn1:
+                JHWebViewManager.getInstance().push(getContext(),"/channel/product/huoqi");
+                break;
+            case R.id.btn2:
+                JHWebViewManager.getInstance().push(getContext(),"/channel/product/wenjian");
+                break;
+            case R.id.btn3:
+                JHWebViewManager.getInstance().push(getContext(),"/channel/product/ziguansimu");
+                break;
+            case R.id.btn4:
+                JHWebViewManager.getInstance().push(getContext(),"/product/mutual");
+                break;
+            case R.id.btn5:
+                JHWebViewManager.getInstance().push(getContext(),"/channel/product/gujiao");
+                break;
+        }
     }
 
     @Override
