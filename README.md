@@ -1,7 +1,7 @@
 
 # 移动端免登陆使用webView使用文档
 - 文档维护人：田俊梅
-- 当前最新版本：sdk-version=V0.2.4
+- 当前最新版本：sdk-version=V0.2.5
 
 #### 1.使用建议
 - 开发环境支持gradle4.4的脚本
@@ -132,6 +132,7 @@ JHWebViewManager.getInstance().logout();
 |参数key|是否必填|描述|示例|
 |:-:|:-:|:-:|:-:|
 |themeColor|否|主题色纸|#cccccc|
+|statusBarColor|否|导航栏颜色，不设置默认和主题色相同|#cccccc|
 |......|否|未来扩展参数|暂无|
 
 #### 9.getJHWebActivityInstance() 获取webView的Activity对象
