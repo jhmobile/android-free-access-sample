@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,6 +45,7 @@ public class LoginModuleActivity extends FragmentActivity implements View.OnClic
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_fail:
+                JHWebViewManager.getInstance().connectResult(-1,"登录失败","login",null);
                 finish();
                 break;
             case R.id.btn_success:
@@ -68,6 +70,13 @@ public class LoginModuleActivity extends FragmentActivity implements View.OnClic
         finish();
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK){
+            JHWebViewManager.getInstance().connectResult(-1,"取消登录","login",null);
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
     public static void startActivity(Context context, int fromFlag) {
         Intent intent = new Intent(context, LoginModuleActivity.class);
