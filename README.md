@@ -107,7 +107,7 @@ JHWebViewManager.getInstance().logout();
 |key|枚举值|描述|回调方法|必填参数|
 |:-:|:-:|:-:|:-:| :-:| 
 |type|login|登录通信|JHWebViewManager.getInstance().login(thirdInfo)|详见login参数表|
-|type|login|登录失败,取消登录|JHWebViewManager.getInstance().connectResult(code, "message", "login", null||
+|type|login|登录失败,取消登录|JHWebViewManager.getInstance().connectResult(code, "message", "login", null)||
 |type|risk|风险测评通信|JHWebViewManager.getInstance().connectResult(code, "message", "type", params);|详见risk参数表,（该参数废弃）|
 
 #### 7.type类型参数表
