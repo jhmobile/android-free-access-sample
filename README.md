@@ -1,7 +1,7 @@
 
 # 移动端免登陆使用webView使用文档
 - 文档维护人：田俊梅
-- 当前最新版本：sdk-version=V0.2.5
+- 当前最新版本：sdk-version=V0.4.1
 
 #### 1.使用建议
 - 开发环境支持gradle4.4的脚本
@@ -27,13 +27,10 @@ allprojects {
 <code>
   dependencies {
     ......
-   implementation 'com.jinhui365.library:jinhui-lib:sdk-version'
+   implementation 'com.jinhui365.android:jinhui-sdk:sdk-version'
    }
 </code>
 </pre>
-
-- AndroidManifest.xml配置FileProvider
-  - 具体配置，参考demo示例
   
   
 - 在application调用以下API进行初始化,钩子type值解释表；参考文档
@@ -153,7 +150,7 @@ JHWebViewManager.getInstance().logout();
   <pre>
   <code>
   
-     implementation ('com.jinhui365.library:jinhui-lib:sdk-version'){
+     implementation ('com.jinhui365.android:jinhui-sdk:sdk-version'){
              exclude group : 'com.google.code.gson'
          }
          
