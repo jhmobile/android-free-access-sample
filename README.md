@@ -15,7 +15,7 @@
 allprojects {
    repositories {
       maven {
-          url "http://mvn.gemantic.com:19909/content/repositories/release-other/"
+          url "http://mvn.jinhui365.cn:19909/repository/release-other/"
             }
        ......
         }
